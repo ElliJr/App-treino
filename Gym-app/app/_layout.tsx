@@ -20,8 +20,14 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
+      <Stack initialRouteName='splash'>
+        {/* Animação de incio */}
+        <Stack.Screen name="splash" options={{ headerShown: false }} />
+
+        {/* Tela principal doa app */}
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        
+        {/* pagina de erro padrao */}
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />

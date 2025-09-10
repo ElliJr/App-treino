@@ -11,7 +11,7 @@ export default function WorkoutScreen() {
       {/* Aquecimento */}
       <ThemedView style={styles.highlight}>
         <ThemedText>
-          <ThemedText style={{ fontWeight: 'bold' }}>Aquecimento Inicial:</ThemedText> 5 a 10 minutos de esteira, bicicleta ou elíptico, seguido de 2 séries leves do primeiro exercício do treino.
+          <ThemedText style={{ fontWeight: 'bold' }}>Aquecimento Inicial:</ThemedText> 3 a 5 minutos de agachamento, bicicleta ou elíptico, seguido de 2 séries leves do primeiro exercício do treino.
         </ThemedText>
       </ThemedView>
 
@@ -19,11 +19,13 @@ export default function WorkoutScreen() {
       <ThemedText type="subtitle" style={styles.subtitle}>📅 Segunda – Peito e Tríceps</ThemedText>
       <ThemedView style={styles.section}>
         {[
-          { exercise: 'Supino reto com barra', sets: '4x8-10', rest: '90s', load: 'Alta', notes: 'Manter escápulas retraídas' },
-          { exercise: 'Supino inclinado com halteres', sets: '4x10', rest: '90s', load: 'Moderada a alta', notes: 'Controle na descida' },
+          { exercise: 'Supino reto', sets: '4x8-10', rest: '90s', load: 'Alta', notes: 'Manter escápulas retraídas' },
+          { exercise: 'Supino inclinado c/halteres', sets: '4x10', rest: '90s', load: 'Moderada a alta', notes: 'Controle na descida' },
+          { exercise: 'Crucifixo no cabo', sets: '4x10', rest: '90s', load: 'Moderada a alta', notes: 'Controle na descida' },
           { exercise: 'Crossover', sets: '3x12', rest: '60s', load: 'Moderada', notes: 'Não juntar totalmente os braços' },
           { exercise: 'Paralelas', sets: '3x até falha', rest: '90s', load: 'Peso corporal/carga adicional', notes: 'Corpo firme' },
-          { exercise: 'Tríceps francês', sets: '3x10-12', rest: '60s', load: 'Moderada', notes: 'Não abrir os cotovelos' },
+          { exercise: 'Tríceps francês/coice', sets: '3x10-12', rest: '60s', load: 'Moderada', notes: 'Não abrir os cotovelos' },
+          { exercise: 'Tríceps testa cabo', sets: '3x10-12', rest: '60s', load: 'Moderada', notes: 'Não abrir os cotovelos' },
         ].map((item, idx) => (
           <ThemedView key={idx} style={styles.row}>
             <Text style={styles.cell}>{item.exercise}</Text>
@@ -42,8 +44,10 @@ export default function WorkoutScreen() {
           { exercise: 'Barra fixa', sets: '4x até falha', rest: '90s', load: 'Peso corporal/carga adicional', notes: 'Amplitude completa' },
           { exercise: 'Remada curvada', sets: '4x8-10', rest: '90s', load: 'Alta', notes: 'Coluna reta' },
           { exercise: 'Puxada na frente', sets: '3x10-12', rest: '75s', load: 'Moderada', notes: 'Segurar 1s embaixo' },
+          { exercise: 'remada cabo', sets: '3x10-12', rest: '75s', load: 'Moderada', notes: '//' },
           { exercise: 'Rosca direta barra W', sets: '4x10', rest: '75s', load: 'Moderada a alta', notes: 'Evitar balanço' },
           { exercise: 'Rosca alternada', sets: '3x12', rest: '60s', load: 'Moderada', notes: 'Rotacionar punho no topo' },
+          { exercise: 'Rosca Martelo', sets: '3x12', rest: '60s', load: 'Moderada', notes: 'Evitar balanço' },
         ].map((item, idx) => (
           <ThemedView key={idx} style={styles.row}>
             <Text style={styles.cell}>{item.exercise}</Text>
@@ -64,6 +68,12 @@ export default function WorkoutScreen() {
           { exercise: 'Cadeira extensora', sets: '3x12', rest: '60s', load: 'Moderada', notes: 'Contrair no topo' },
           { exercise: 'Mesa flexora', sets: '3x12', rest: '60s', load: 'Moderada', notes: 'Controle na fase excêntrica' },
           { exercise: 'Elevação de pernas', sets: '4x15', rest: '45s', load: 'Peso corporal', notes: 'Não arquear lombar' },
+          { exercise: 'Agachamento Smith', sets: '5x8', rest: '120s', load: 'Alta', notes: 'Descer até 90° ou mais' },
+          { exercise: 'Infra', sets: '5x20', rest: '30s', load: 'Peso corporal', notes: 'Controle no abdômen' },
+          { exercise: 'Supra Solo', sets: '5x20', rest: '30s', load: 'Peso corporal', notes: 'Não arquear lombar' },
+          { exercise: 'Oblíquos', sets: '4x20', rest: '30s', load: 'Peso corporal', notes: 'Rotação consciente' },
+          { exercise: 'Lombar', sets: '4x20', rest: '30s', load: 'Peso corporal', notes: 'Não forçar lombar' },
+          { exercise: 'biceps', sets: '4x20', rest: '30s', load: 'moderada', notes: 'Não forçar muito' },
         ].map((item, idx) => (
           <ThemedView key={idx} style={styles.row}>
             <Text style={styles.cell}>{item.exercise}</Text>
@@ -84,6 +94,7 @@ export default function WorkoutScreen() {
           { exercise: 'Elevação frontal', sets: '3x12', rest: '60s', load: 'Moderada', notes: 'Controle na descida' },
           { exercise: 'Remada alta barra W', sets: '3x10', rest: '75s', load: 'Moderada a alta', notes: 'Cuidado com punho' },
           { exercise: 'Encolhimento de ombros', sets: '4x15', rest: '60s', load: 'Alta', notes: 'Contrair bem em cima' },
+          { exercise: 'Remada Alta', sets: '4x15', rest: '60s', load: 'Alta', notes: 'Contrair bem em cima' },
         ].map((item, idx) => (
           <ThemedView key={idx} style={styles.row}>
             <Text style={styles.cell}>{item.exercise}</Text>
@@ -99,11 +110,11 @@ export default function WorkoutScreen() {
       <ThemedText type="subtitle" style={styles.subtitle}>📅 Sexta – Funcional / HIIT</ThemedText>
       <ThemedView style={styles.section}>
         {[
-          { exercise: 'Burpees', sets: '4x15', rest: '60s', load: 'Peso corporal', notes: 'Explosividade' },
-          { exercise: 'Kettlebell swing', sets: '4x15', rest: '60s', load: 'Moderada', notes: 'Explosão de quadril' },
-          { exercise: 'Corrida no lugar (alta intensidade)', sets: '4x40s', rest: '30s', load: 'Peso corporal', notes: 'Joelhos altos' },
-          { exercise: 'Flexão explosiva', sets: '3x12', rest: '60s', load: 'Peso corporal', notes: 'Tirar mãos do chão' },
-          { exercise: 'Prancha isométrica', sets: '3x1min', rest: '45s', load: 'Peso corporal', notes: 'Corpo reto' },
+          { exercise: 'Rosca Alternada', sets: '3x12', rest: '60s', load: 'Moderada', notes: 'Rotacionar punho no topo' },
+          { exercise: 'Antebraço', sets: '3x12', rest: '60s', load: 'alta', notes: 'Rotacionar punho no topo' },
+          { exercise: 'Supino reto', sets: '4x8-10', rest: '90s', load: 'Alta', notes: 'Manter escápulas retraídas' },
+          { exercise: 'Supino inclinado c/halteres', sets: '4x10', rest: '90s', load: 'Moderada a alta', notes: 'Controle na descida' },
+          { exercise: 'Puxada na frente', sets: '3x10-12', rest: '75s', load: 'Moderada', notes: 'Segurar 1s embaixo' },
         ].map((item, idx) => (
           <ThemedView key={idx} style={styles.row}>
             <Text style={styles.cell}>{item.exercise}</Text>
@@ -128,22 +139,22 @@ export default function WorkoutScreen() {
 const styles = StyleSheet.create({
   container: {
     padding: 20,
-    backgroundColor: '#74746aff',
+    backgroundColor: '#000000ff',
   },
   title: {
     fontSize: 28,
     top: 50,
     textAlign: 'center',
     marginBottom: 40,
-    color: 'black',
+    color: 'white',
   },
   subtitle: {
     fontSize: 20,
     marginTop: 25,
-    color: '#000000ff',
+    color: '#ffffffff',
   },
   section: {
-    backgroundColor: '#3d3d2eff',
+    backgroundColor: '#960505e7',
     padding: 15,
     borderRadius: 8,
     marginVertical: 10,
@@ -162,9 +173,9 @@ const styles = StyleSheet.create({
     borderRadius: 3,
   },
   highlight: {
-    backgroundColor: '#f9f9e741',
+    backgroundColor: '#2c2c1941',
     borderLeftWidth: 4,
-    borderLeftColor: '#0c5460',
+    borderLeftColor: '#af0101ff',
     padding: 10,
     marginVertical: 15,
   },
