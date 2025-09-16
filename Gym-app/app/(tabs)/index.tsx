@@ -2,6 +2,9 @@ import React from 'react';
 import { StyleSheet, ScrollView, Text } from 'react-native';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { Link } from 'expo-router'
+
+
 
 export default function WorkoutScreen() {
   return (
@@ -41,11 +44,11 @@ export default function WorkoutScreen() {
       <ThemedText type="subtitle" style={styles.subtitle}>📅 Terça – Costas e Bíceps</ThemedText>
       <ThemedView style={styles.section}>
         {[
-          { exercise: 'Barra fixa', sets: '4x até falha', rest: '90s', load: 'Peso corporal/carga adicional', notes: 'Amplitude completa' },
           { exercise: 'Remada curvada', sets: '4x8-10', rest: '90s', load: 'Alta', notes: 'Coluna reta' },
           { exercise: 'Puxada na frente', sets: '3x10-12', rest: '75s', load: 'Moderada', notes: 'Segurar 1s embaixo' },
           { exercise: 'remada cabo', sets: '3x10-12', rest: '75s', load: 'Moderada', notes: '//' },
           { exercise: 'Rosca direta barra W', sets: '4x10', rest: '75s', load: 'Moderada a alta', notes: 'Evitar balanço' },
+          { exercise: 'Biceps na máquina', sets: '3x8-10-12', rest: '75s', load: 'Moderada a alta', notes: 'Aumento progresivo' },
           { exercise: 'Rosca alternada', sets: '3x12', rest: '60s', load: 'Moderada', notes: 'Rotacionar punho no topo' },
           { exercise: 'Rosca Martelo', sets: '3x12', rest: '60s', load: 'Moderada', notes: 'Evitar balanço' },
         ].map((item, idx) => (
@@ -63,17 +66,12 @@ export default function WorkoutScreen() {
       <ThemedText type="subtitle" style={styles.subtitle}>📅 Quarta – Pernas e Abdômen</ThemedText>
       <ThemedView style={styles.section}>
         {[
-          { exercise: 'Agachamento livre', sets: '5x8', rest: '120s', load: 'Alta', notes: 'Descer até 90° ou mais' },
-          { exercise: 'Leg press', sets: '4x10', rest: '90s', load: 'Alta', notes: 'Não travar joelhos' },
           { exercise: 'Cadeira extensora', sets: '3x12', rest: '60s', load: 'Moderada', notes: 'Contrair no topo' },
           { exercise: 'Mesa flexora', sets: '3x12', rest: '60s', load: 'Moderada', notes: 'Controle na fase excêntrica' },
-          { exercise: 'Elevação de pernas', sets: '4x15', rest: '45s', load: 'Peso corporal', notes: 'Não arquear lombar' },
+          { exercise: 'Leg press', sets: '4x10', rest: '90s', load: 'Alta', notes: 'Não travar joelhos' },
+          { exercise: 'Agachamento livre', sets: '5x8', rest: '120s', load: 'Alta', notes: 'Descer até 90° ou mais' },
           { exercise: 'Agachamento Smith', sets: '5x8', rest: '120s', load: 'Alta', notes: 'Descer até 90° ou mais' },
-          { exercise: 'Infra', sets: '5x20', rest: '30s', load: 'Peso corporal', notes: 'Controle no abdômen' },
-          { exercise: 'Supra Solo', sets: '5x20', rest: '30s', load: 'Peso corporal', notes: 'Não arquear lombar' },
           { exercise: 'Oblíquos', sets: '4x20', rest: '30s', load: 'Peso corporal', notes: 'Rotação consciente' },
-          { exercise: 'Lombar', sets: '4x20', rest: '30s', load: 'Peso corporal', notes: 'Não forçar lombar' },
-          { exercise: 'biceps', sets: '4x20', rest: '30s', load: 'moderada', notes: 'Não forçar muito' },
         ].map((item, idx) => (
           <ThemedView key={idx} style={styles.row}>
             <Text style={styles.cell}>{item.exercise}</Text>
@@ -125,6 +123,14 @@ export default function WorkoutScreen() {
           </ThemedView>
         ))}
       </ThemedView>
+
+
+      <Text>
+        
+        <Link href="/metaPR">Ir para Meta PR</Link>
+
+      </Text>
+
 
       {/* Alongamento */}
       <ThemedView style={styles.highlight}>
