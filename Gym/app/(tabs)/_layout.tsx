@@ -33,6 +33,14 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <IconSymbol size={18} name="house.fill" color={color} />,
         }}
       />
+      <Tabs.Screen
+        name="metaPr"
+        options={{
+          title: 'Metas',
+          href: null,
+          tabBarIcon: ({ color }) => <IconSymbol size={18} name="gear" color={color} />,
+        }}
+      />
     </Tabs>
   );
 }

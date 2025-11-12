@@ -127,7 +127,7 @@ export default function WorkoutScreen() {
 
       <Text>
         
-        <Link href="/metaPR">Ir para Meta PR</Link>
+        
 
       </Text>
 

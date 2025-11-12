@@ -4,7 +4,7 @@
     "slug": "Gym-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/gym-app.png",
+    "icon": "./assets/images/gym2.jpeg",
     "scheme": "gymapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -13,7 +13,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/gym-app.png",
+        "foregroundImage": "./assets/images/gym2.jpeg",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
@@ -22,14 +22,14 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/gym-app.png"
+      "favicon": "./assets/images/gym2.jpeg"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/gym-app.png",
+          "image": "./assets/images/gym2.jpeg",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
